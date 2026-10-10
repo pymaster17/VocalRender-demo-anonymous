@@ -24,11 +24,11 @@
         <div class="method-tile-head">
           <div class="method-name"><i aria-hidden="true"></i>${escapeHtml(method.name)}</div>
           ${method.tag ? `<span class="method-tag">${escapeHtml(method.tag)}</span>` : ""}
-          <div class="audio-status pending">Loading</div>
+          <div class="audio-status ready">Ready</div>
         </div>
         <div class="audio-player" data-src="${escapeHtml(method.src)}">
-          <audio id="${audioId}" preload="metadata"></audio>
-          <button class="play-button" type="button" aria-label="Play ${escapeHtml(method.name)}" disabled>▶</button>
+          <audio id="${audioId}" preload="none"></audio>
+          <button class="play-button" type="button" aria-label="Play ${escapeHtml(method.name)}">▶</button>
           <input class="progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Audio progress" disabled />
           <span class="time">0:00</span>
         </div>

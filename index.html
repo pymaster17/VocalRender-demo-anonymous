@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Audio demos for VocalRender, a score-native singing voice synthesis system."
+    />
+    <meta name="theme-color" content="#f4efe5" />
+    <title>VocalRender — Audio Demo</title>
+    <link rel="icon" href="assets/site/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/site/styles.css" />
+  </head>
+  <body>
+    <header class="paper-header section-shell" id="top">
+      <nav class="topbar" aria-label="Project navigation">
+        <a class="wordmark" href="#top" aria-label="VocalRender home">
+          <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span>VocalRender</span>
+        </a>
+        <div class="topbar-links">
+          <a href="https://anonymous.4open.science/r/VocalRender-anonymous-EDD4/" target="_blank" rel="noreferrer">Code ↗</a>
+        </div>
+      </nav>
+
+      <div class="paper-summary">
+        <div class="paper-title">
+          <div class="eyebrow">Research project · Singing voice synthesis</div>
+          <h1>VocalRender</h1>
+          <p class="paper-subtitle">Score-native singing voice synthesis for real-world composition.</p>
+        </div>
+        <div class="paper-description">
+          <p>
+            VocalRender directly transforms composer-oriented symbolic scores—lyrics,
+            MIDI pitches, note values, and tempo—into expressive singing audio without
+            requiring phoneme-level durations or time-aligned acoustic guidance.
+          </p>
+          <div class="paper-actions">
+            <a class="secondary-link" href="https://anonymous.4open.science/r/VocalRender-anonymous-EDD4/" target="_blank" rel="noreferrer">Anonymous code repository <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="innovations" aria-label="Core innovations">
+        <article><span>01</span><div><h2>Score-native representation</h2><p>Interleaved lyrics and pitch–duration pairs preserve note-to-word alignment and melisma.</p></div></article>
+        <article><span>02</span><div><h2>Continuous acoustic latents</h2><p>AudioVAE retains fine pitch, timbre, articulation, and local acoustic detail.</p></div></article>
+        <article><span>03</span><div><h2>Autoregressive diffusion</h2><p>Global prosody modeling and local reconstruction produce expressive, high-fidelity singing.</p></div></article>
+      </div>
+    </header>
+
+    <main>
+      <section class="demos" id="demos">
+        <div class="section-shell">
+          <div class="demo-heading">
+            <div>
+              <div class="section-index">Audio comparisons</div>
+              <h2>Listen side by side.</h2>
+            </div>
+            <p>Each human-reviewed sample pairs one symbolic score with ground truth and six system outputs. Headphones recommended.</p>
+          </div>
+
+          <div class="demo-toolbar">
+            <div class="demo-count"><strong>10</strong><span>human-reviewed<br />score excerpts</span></div>
+            <div class="legend">
+              <span><i class="legend-dot proposed"></i> Ours</span>
+              <span><i class="legend-dot reference"></i> Reference</span>
+              <span><i class="legend-dot baseline"></i> Baseline</span>
+            </div>
+          </div>
+
+          <div id="demo-list" class="demo-list" aria-live="polite"></div>
+          <noscript>This demo page requires JavaScript for its audio controls.</noscript>
+        </div>
+      </section>
+
+      <dialog id="score-dialog" class="score-dialog">
+        <button class="score-dialog-close" type="button" aria-label="Close score preview">×</button>
+        <img src="" alt="Expanded music score" />
+      </dialog>
+    </main>
+
+    <script src="assets/site/demo-data.js"></script>
+    <script src="assets/site/app.js"></script>
+  </body>
+</html>
